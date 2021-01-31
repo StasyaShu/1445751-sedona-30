@@ -1,0 +1,340 @@
+:root {
+  --basic-white: #ffffff;
+  --basik-dark-white: #E5E5E5;
+  --basic-black: #000000;
+  --basic-light-black: #333333;
+  --basic-extralight-black: #666666;
+  --basic-blue: #81B3D2;
+  --basic-dark-blue: #669EC0;
+  --basic-extra-dark-blue: #5496BD;
+  --basic-neytral: #eeeeee;
+  --basic-light-brown: #766357;
+  --basic-brown: #766357;
+  --basic-dark-brown: #604E43;
+  --basic-extra-dark-brown: #503E33;
+  --basic-light-grey: #F2F2F2;
+  --basic-grey: #A9A9A9;
+  --basic-pale-grey: #CACACA;
+
+
+  --special-blue: #2C95BB;
+  --special-brown: #935C61;
+  --special-red: #ED8089;
+  --special-green: #6A996C;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src:
+  url("PTSans-Bold.woff2") format("woff2"),
+  url("PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src:
+  url("PTSans.woff2") format("woff2"),
+  url("PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  }
+
+.site-navigation a:hover {
+  color: var(--basic-blue)
+}
+
+.site-navigation a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Main */
+
+.container-header {
+  background-color: var(--special-blue);
+  background:
+  url("../img/shape.svg") no-repeat,
+  url("../img/background_photo.png") no-repeat;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.features {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.features-city {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  }
+
+.features-city-real {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.features-city-descr {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.features-city img {
+  background-color: var(--special-blue);
+}
+
+.features-offer-item {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.features-offer-descr {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-light-black)
+}
+
+.features-special {
+  background-color: var(--basic-neytral);
+}
+
+.features-special-item {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.features-special-descr {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-light-black)
+}
+
+/* Search hotel */
+
+.search-hotel h2 {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.search-hotel p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-light-black);
+}
+
+
+.main-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+/* Catalog page */
+
+.main-navigation-catalog {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.breadcrumbs a:active {
+  color: var(--basic-brown);
+}
+
+.breadcrumbs-currennt {
+  color: var(--basic-brown);
+}
+
+.filters {
+  background-color: var(--special-blue);
+  background: url("../img/background_photo.png") no-repeat;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+legend, caption {
+  color: var(--basic-white);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter-option {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.price-filter tr {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.founded {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.sorting-list {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: var(--basic-black);
+  opacity: 0.3;
+ /* нижнее подчеркивание фигурой...пока не понимаю как сделать */
+}
+
+.sorting-list a:focus {
+  color: var(--basic-blue);
+}
+
+.sorting-list a:hover {
+  color: var(--basic-blue);
+}
+
+/* псевдокласс для нажатия active почему-то не сработал */
+
+.hotels-description {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-light-black);
+}
+
+.button-more {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.button-book {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-white);
+  background-color: var(--basic-brown);
+}
+
+.button-more:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.button-more:active {
+  background-color: var(--basic-extra-dark-blue);
+}
+
+.button-book:hover {
+  background-color: var(--basic-dark-brown)
+}
+
+.button-book:active {
+  background-color: var(--basic-extra-dark-brown);
+}
+
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-extralight-black);
+  background-color: var(--basic-light-grey);
+}
+
+.hotels-item-name:hover {
+  color: var(--basic-blue);
+}
+
+.hotels-item-name:active {
+  opacity: 0.3;
+}
+
+/* действия с сылкой htmlacademy пока что тоже не даются-головушка не думает, рученьки кривенькие */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
