@@ -9,32 +9,32 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body-catalog">
+<body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation-catalog">
+    <nav class="main-navigation">
+      <ul class="site-navigation">
+        <li>
+          <a class="site-navigation-information" href="#">Информация</a>
+        </li>
+        <li>
+          <a class="site-navigation-photo-video" href="#">Фото и видео</a>
+        </li>
+        <li>
+          <a class="site-navigation-state-map" href="#">Карта штата</a>
+        </li>
+        <li>
+          <a a class="site-navigation-hotels" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
       <a class="main-header-logo" href="index.html">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип городка Седона">
       </a>
-      <ul class="breadcrumbs">
-        <li>
-          <a class="breadcrumbs-information" href="#">Информация</a>
-        </li>
-        <li>
-          <a class="breadcrumbs-photo-video" href="#">Фото и видео</a>
-        </li>
-        <li>
-          <a class="breadcrumbs-state-map" href="#">Карта штата</a>
-        </li>
-        <li>
-          <a a class="breadcrumbs-currennt" href="catalog.html">Гостиницы</a>
-        </li>
-      </ul>
     </nav>
   </header>
   <main class="container-catalog">
     <section class="filters">
       <h1>Жилье в городе</h1>
-      <form class="filter" action="https://echo.htmlacademy.ru/courses" method="get">
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset>
           <legend>Инфраструктура</legend>
           <ul class="filter-list">
@@ -153,41 +153,23 @@
     </div>
     <ul class="footer-social">
       <li class="social-item">
-        <a class="button" href="#">
+        <a class="social-link" href="#">
           Twitter
-          <svg>
-            <rect width="46" height="48" fill="#81B3D2"></rect>
-          </svg>
-          <object type="image/svg+xml" data="twitter.svg">
-            <img src="img/twitter.svg" alt="twitter">
-          </object>
         </a>
       </li>
       <li class="social-item">
-        <a class="button" href="#">
+        <a class="social-link" href="#">
           Facebook
-          <svg>
-            <rect width="46" height="48" fill="#81B3D2"></rect>
-          </svg>
-          <object type="image/svg+xml" data="facebook.svg">
-            <img src="img/facebook.svg" alt="facebook">
-          </object>
         </a>
       </li>
       <li class="social-item">
-        <a class="button" href="#">
+        <a class="social-link" href="#">
           Youtube
-          <svg>
-            <rect width="46" height="48" fill="#81B3D2"></rect>
-          </svg>
-          <object type="image/svg+xml" data="youtube.svg">
-            <img src="img/youtube.svg" alt="youtube">
-          </object>
         </a>
       </li>
     </ul>
     <p class="footer-copyright">Website by</p>
-    <a class="footer-htmlacademy" href="https://htmlacademy.ru">
+    <a class="footer-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
       <object type="image/svg+xml" data="htmlacademy.svg">
         <img src="img/logo_htmlacademy.svg" alt="htmlacademy">
       </object>

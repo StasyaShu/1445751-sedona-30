@@ -26,8 +26,8 @@
 @font-face {
   font-family: "PTSans";
   src:
-  url("PTSans-Bold.woff2") format("woff2"),
-  url("PTSans-Bold.woff") format("woff");
+    url("PTSans-Bold.woff2") format("woff2"),
+    url("PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -35,16 +35,21 @@
 @font-face {
   font-family: "PTSans";
   src:
-  url("PTSans.woff2") format("woff2"),
-  url("PTSans.woff") format("woff");
+    url("PTSans.woff2") format("woff2"),
+    url("PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Global */
 
-body {
-  min-width: 960px;
+.page-body {
   margin: 0;
   padding: 0;
   font-family: "PTSans", Arial, sans-serif;
@@ -55,6 +60,16 @@ body {
   letter-spacing: 0px;
   color: var(--basic-black);
   text-transform: uppercase;
+  background-color: var(--basic-light-grey);
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  min-height: 100%;
   background-color: var(--basic-white);
 }
 
@@ -72,31 +87,56 @@ ul {
   list-style: none;
 }
 
+
 /* Main navigation */
 
-.main-navigation {
+.site-navigation {
+  display: flex;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  }
-
-.site-navigation a:hover {
-  color: var(--basic-blue)
 }
 
-.site-navigation a:focus {
+.site-navigation li {
+  padding: auto;
+  margin: auto;
+}
+
+
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+
+.site-navigation a:active {
   color: var(--basic-black);
-  opacity: 0.3;
+  opacity: 30%;
+}
+
+.site-navigation a: {
+  color: var(--basic-brown);
 }
 
 /* Main */
 
+
 .container-header {
   background-color: var(--special-blue);
   background:
-  url("../img/shape.svg") no-repeat,
-  url("../img/background_photo.png") no-repeat;
+    url("../img/shape.svg") no-repeat bottom center,
+    url("../img/background_photo.png") no-repeat;
+  width: 1200px;
+  height: 509px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
+
+.features {
+  width: 1200px;
+  padding: 50px 0;
+  text-align: center;
+}
+
 
 h2 {
   font-size: 21px;
@@ -110,10 +150,69 @@ h2 {
   font-weight: 400;
 }
 
+.description-title {
+  display: block;
+  width: 500px;
+  height: 80px;
+  margin: 2px auto;
+}
+
+.description-promo {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 2px auto 26px;
+}
+
 .features-city {
-  background-color: var(--basic-blue);
+  height: 256px;
   color: var(--basic-white);
-  }
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+.features-city-wrap {
+  width: 400px;
+  height: 256px;
+  padding: 52px 35px 52px 35px;
+  background-color: var(--basic-blue);
+  margin-left: 0px;
+  justify-self: flex-start;
+}
+
+.photo-city-wrap {
+  background-color: var(--special-brown);
+  align-self: center;
+
+}
+
+.features-offer-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.features-offer-wrap li {
+  margin: auto;
+  padding: 50px 40px 50px 40px;
+  width: 400px;
+  height: 320px;
+  text-align: center;
+}
+
+.features-special-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--basic-neytral);
+}
+
+.features-special-wrap li {
+  margin: auto;
+  padding: 50px 40px 50px 40px;
+  width: 400px;
+  height: 320px;
+  text-align: center;
+}
 
 .features-city-real {
   font-size: 21px;
@@ -161,6 +260,24 @@ h2 {
   color: var(--basic-light-black)
 }
 
+.interested {
+  display: block;
+  width: 297px;
+  height: 24px;
+  align-items: center;
+  text-align: center;
+  margin: 2px auto;
+}
+
+.search-hotel-book {
+  display: block;
+  width: 440px;
+  height: 95px;
+  align-items: center;
+  text-align: center;
+  margin: 30px auto;
+}
+
 /* Search hotel */
 
 .search-hotel h2 {
@@ -178,6 +295,9 @@ h2 {
 
 
 .main-footer {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 1fr;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -187,7 +307,32 @@ h2 {
   font-weight: 700;
 }
 
-.footer-copyright {
+.footer-social {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.social-item {
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-blue);
+  margin: 0px 5px;
+}
+
+.twitter {
+  background-image: url("../img/twitter.svg") no-repeat;
+}
+
+.facebook {
+  background-image: url("../img/facebook.svg") no-repeat;
+}
+.youtube {
+  background-image: url("../img/youtube.svg") no-repeat;
+}
+
+.copyright-wrapper {
+  display: flex;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -195,18 +340,10 @@ h2 {
 
 /* Catalog page */
 
-.main-navigation-catalog {
+.main-navigation {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-}
-
-.breadcrumbs a:active {
-  color: var(--basic-brown);
-}
-
-.breadcrumbs-currennt {
-  color: var(--basic-brown);
 }
 
 .filters {
@@ -215,7 +352,8 @@ h2 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-legend, caption {
+legend,
+caption {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 21px;
@@ -254,8 +392,8 @@ legend, caption {
   font-weight: 400;
   text-decoration: underline;
   color: var(--basic-black);
-  opacity: 0.3;
- /* нижнее подчеркивание фигурой...пока не понимаю как сделать */
+  opacity: 30%;
+  /* нижнее подчеркивание фигурой...пока не понимаю как сделать */
 }
 
 .sorting-list a:focus {
@@ -320,21 +458,7 @@ legend, caption {
 }
 
 .hotels-item-name:active {
-  opacity: 0.3;
+  opacity: 30%;
 }
 
-/* действия с сылкой htmlacademy пока что тоже не даются как и много чего:) головушка кипит, рученьки кривенькие */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* действия с сылкой htmlacademy пока что тоже не даются */
