@@ -415,9 +415,11 @@ caption {
   margin: 3px 33px;
 }
 
-.sorting-list-wrapper b,p {
+.sorting-list-wrapper b,
+p {
   margin: 15px 33px;
 }
+
 .filter-option {
   color: var(--basic-white);
   font-size: 14px;
