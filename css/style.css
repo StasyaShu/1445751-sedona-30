@@ -64,8 +64,8 @@
 }
 
 .page-wrapper {
-  /* display: grid; */
-  /* grid-template-rows: min-content 1fr min-content; */
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   margin: 0 auto;
   padding: 0;
   width: 1200px;
@@ -87,11 +87,22 @@ ul {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
 
 /* Main navigation */
 
-.site-navigation {
+.main-header {
   display: flex;
+  flex-direction: row;
+}
+
+.site-navigation {
+  /* display: flex; */
+  /* flex-direction: row; */
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -125,12 +136,16 @@ ul {
   display: flex;
   justify-self: center;
   align-items: center;
+  justify-content: center;
 }
 
 .features {
   width: 1200px;
   padding: 50px 0;
   text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 
@@ -138,12 +153,6 @@ h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-}
-
-.features {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 400;
 }
 
 .description-title {
@@ -158,6 +167,10 @@ h2 {
   align-items: center;
   text-align: center;
   margin: 2px auto 26px;
+}
+
+.features-list {
+  list-style: none;
 }
 
 .features-city {
@@ -188,6 +201,11 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.features-offer {
+  display: flex;
+  flex-direction: column;
+}
+
 .features-offer-wrap li {
   margin: auto;
   padding: 50px 40px 50px 40px;
@@ -200,6 +218,12 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--basic-neytral);
+}
+
+.features-special {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .features-special-wrap li {
@@ -247,6 +271,9 @@ h2 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  width: 98px;
+  height: 43px;
+  align-self: center;
 }
 
 .features-special-descr {
@@ -267,7 +294,7 @@ h2 {
 
 .search-hotel-book {
   display: block;
-  width: 440px;
+  width: 450px;
   height: 95px;
   align-items: center;
   text-align: center;
@@ -289,6 +316,7 @@ h2 {
   color: var(--basic-light-black);
 }
 
+/* Footer */
 
 .main-footer {
   display: grid;
@@ -298,6 +326,8 @@ h2 {
 }
 
 .footer-contacts {
+  display: flex;
+  flex-direction: column;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -316,17 +346,6 @@ h2 {
   margin: 0px 5px;
 }
 
-.twitter {
-  background-image: url("../img/twitter.svg") no-repeat;
-}
-
-.facebook {
-  background-image: url("../img/facebook.svg") no-repeat;
-}
-.youtube {
-  background-image: url("../img/youtube.svg") no-repeat;
-}
-
 .copyright-wrapper {
   display: flex;
   font-size: 14px;
@@ -342,10 +361,37 @@ h2 {
   font-weight: 700;
 }
 
+.container-catalog {
+  display: grid;
+}
+
 .filters {
   background-color: var(--special-blue);
   background: url("../img/background_photo.png") no-repeat;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 1200px;
+  height: 217px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+}
+
+fieldset {
+  width: 150px;
+  height: 164px;
+  border: none;
+  margin-top: 27px;
+  margin-left: 72px;
+}
+
+.price-filter-wrapper {
+  width: 317px;
+  height: 36px;
+  margin-left: 363px;
+  margin-right: 73px;
+  margin-top: 27px;
 }
 
 legend,
@@ -356,6 +402,22 @@ caption {
   font-weight: 700;
 }
 
+.sorting-list-wrapper {
+  display: flex;
+
+}
+
+.sorting-list {
+  display: flex;
+}
+
+.sorting-list a {
+  margin: 3px 33px;
+}
+
+.sorting-list-wrapper b,p {
+  margin: 15px 33px;
+}
 .filter-option {
   color: var(--basic-white);
   font-size: 14px;
@@ -402,13 +464,46 @@ caption {
 
 /* псевдокласс для нажатия active почему-то не сработал */
 
+.hotels-list {
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+.hotels-item {
+  display: flex;
+
+}
+
+.hotels-description {
+  height: 90px;
+  margin: 30px 520px 30px 30px;
+}
+
+.rating-wrapper {
+  margin-right: 73px;
+  width: 112px;
+}
+
+.hotels-item img {
+  width: 135px;
+  height: 90px;
+  margin: 30px 30px 30px 73px;
+
+}
+
+.hotel-name {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
 .hotels-description {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: var(--basic-light-black);
 }
-/* TODO: исправлены теги, будет новый класс - прописать стили */
+
 
 .button-more {
   font-size: 14px;
