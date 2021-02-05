@@ -64,8 +64,8 @@
 }
 
 .page-wrapper {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  /* display: grid; */
+  /* grid-template-rows: min-content 1fr min-content; */
   margin: 0 auto;
   padding: 0;
   width: 1200px;
@@ -110,10 +110,6 @@ ul {
 .site-navigation a:active {
   color: var(--basic-black);
   opacity: 30%;
-}
-
-.site-navigation a {
-  color: var(--basic-brown);
 }
 
 /* Main */
@@ -412,6 +408,7 @@ caption {
   font-weight: 400;
   color: var(--basic-light-black);
 }
+/* TODO: исправлены теги, будет новый класс - прописать стили */
 
 .button-more {
   font-size: 14px;
