@@ -123,6 +123,19 @@ ul {
   opacity: 30%;
 }
 
+.site-navigation a:focus {
+color: var(--basic-light-brown);
+}
+
+.site-navigation-hotels-link.active {
+  color: var(--basic-light-brown);
+}
+
+.site-navigation-hotels-link.active:hover {
+  color: var(--basic-light-brown);
+}
+
+
 /* Main */
 
 
@@ -171,6 +184,7 @@ h2 {
 
 .features-list {
   list-style: none;
+  padding: 0;
 }
 
 .features-city {
@@ -415,9 +429,9 @@ caption {
   margin: 3px 33px;
 }
 
-.sorting-list-wrapper b,
-p {
-  margin: 15px 33px;
+.sorting-list-wrapper b, p {
+  /* TODO: применить отдельно к классу (без тегов) и переписать */
+  /* margin: 15px 33px; */
 }
 
 .filter-option {
@@ -446,7 +460,7 @@ p {
   font-weight: 400;
 }
 
-.sorting-list {
+.sorting-list a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -464,6 +478,11 @@ p {
   color: var(--basic-blue);
 }
 
+.sorting-list a:active {
+  color: var(--basic-black);
+  opacity: 100%;
+}
+
 /* псевдокласс для нажатия active почему-то не сработал */
 
 .hotels-list {
@@ -473,12 +492,12 @@ p {
 
 .hotels-item {
   display: flex;
+  padding: 30px;
 
 }
 
 .hotels-description {
-  height: 90px;
-  margin: 30px 520px 30px 30px;
+  /* margin: 30px auto 30px 30px; */
 }
 
 .rating-wrapper {
@@ -529,6 +548,7 @@ p {
 
 .button-more:active {
   background-color: var(--basic-extra-dark-blue);
+  /* TODO: при нажатии цвет текста описать через RGBA 4 параметр отвечает за прозрачность */
 }
 
 .button-book:hover {
