@@ -95,24 +95,55 @@ ul {
 
 /* Main navigation */
 
+.page-body {
+  position: relative;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
 .main-header {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
 
+.main-navigation {
+  position: relative;
+  height: 50px;
+}
+
+.main-header-logo {
+  position: absolute;
+  width: 138px;
+  height: 70px;
+  left: 530px;
+  top: 0px;
+  z-index: 2;
+}
+
 .site-navigation {
-  /* display: flex; */
-  /* flex-direction: row; */
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  list-style: none;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+  padding: 0;
 }
 
-.site-navigation li {
-  padding: auto;
-  margin: auto;
+.site-navigation-information-link {
+  padding-left: 70px;
 }
 
+.site-navigation-hotels-link {
+  padding-left: 130px;
+}
+
+.site-navigation-state-map-link {
+  padding-left: 200px;
+}
 
 .site-navigation a:hover {
   color: var(--basic-blue);
@@ -124,7 +155,7 @@ ul {
 }
 
 .site-navigation a:focus {
-color: var(--basic-light-brown);
+  color: var(--basic-light-brown);
 }
 
 .site-navigation-hotels-link.active {
@@ -429,7 +460,8 @@ caption {
   margin: 3px 33px;
 }
 
-.sorting-list-wrapper b, p {
+.sorting-list-wrapper b,
+p {
   /* TODO: применить отдельно к классу (без тегов) и переписать */
   /* margin: 15px 33px; */
 }
