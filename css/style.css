@@ -238,7 +238,8 @@ h2 {
 .photo-city-wrap {
   background-color: var(--special-brown);
   align-self: center;
-
+  width: 800px;
+  height: 256px;
 }
 
 .features-offer-wrap {
@@ -289,6 +290,7 @@ h2 {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  width: 340px;
 }
 
 .features-city img {
@@ -319,6 +321,7 @@ h2 {
   width: 98px;
   height: 43px;
   align-self: center;
+  justify-content: center;
 }
 
 .features-special-descr {
@@ -368,6 +371,8 @@ h2 {
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 1fr;
   background-color: rgba(255, 255, 255, 0.9);
+  justify-items: center;
+  align-items: center;
 }
 
 .footer-contacts {
@@ -376,6 +381,8 @@ h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-left: 73px;
+  padding-bottom: 20px;
 }
 
 .footer-social {
@@ -447,25 +454,6 @@ caption {
   font-weight: 700;
 }
 
-.sorting-list-wrapper {
-  display: flex;
-
-}
-
-.sorting-list {
-  display: flex;
-}
-
-.sorting-list a {
-  margin: 3px 33px;
-}
-
-.sorting-list-wrapper b,
-p {
-  /* TODO: применить отдельно к классу (без тегов) и переписать */
-  /* margin: 15px 33px; */
-}
-
 .filter-option {
   color: var(--basic-white);
   font-size: 14px;
@@ -480,30 +468,52 @@ p {
   font-weight: 400;
 }
 
+.sorting-list-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sorting-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.scrolling {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+}
+
 .founded {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-left: 73px;
 }
 
 .sorting {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  margin: 3px 33px;
 }
 
 .sorting-list a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  text-decoration: underline;
   color: var(--basic-black);
   opacity: 30%;
-  /* нижнее подчеркивание фигурой...пока не понимаю как сделать */
+  margin: 3px 33px;
+  border-bottom: 2px dashed var(--basic-blue);
 }
 
 .sorting-list a:focus {
   color: var(--basic-blue);
+  border-bottom: none;
 }
 
 .sorting-list a:hover {
@@ -513,35 +523,47 @@ p {
 .sorting-list a:active {
   color: var(--basic-black);
   opacity: 100%;
+  border-bottom: none;
 }
-
-/* псевдокласс для нажатия active почему-то не сработал */
 
 .hotels-list {
   display: grid;
   grid-template-rows: min-content min-content min-content;
+  list-style: none;
+  padding: 0%;
+  /* border: 2px solid var(--basik-dark-white); */
+}
+
+.hotels-item-name-wrapper {
+  display: grid;
 }
 
 .hotels-item {
   display: flex;
-  padding: 30px;
-
+  align-items: center;
+  border-top: 2px solid var(--basik-dark-white);
+  border-bottom: 2px solid var(--basik-dark-white);
 }
 
-.hotels-description {
-  /* margin: 30px auto 30px 30px; */
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-extralight-black);
+  background-color: var(--basic-light-grey);
+  padding: 3px 5px;
 }
 
 .rating-wrapper {
-  margin-right: 73px;
-  width: 112px;
+  width: 140px;
+  margin-left: 500px;
+
 }
 
 .hotels-item img {
   width: 135px;
   height: 90px;
-  margin: 30px 30px 30px 73px;
-
+  margin-left: 73px;
 }
 
 .hotel-name {
@@ -555,8 +577,9 @@ p {
   line-height: 21px;
   font-weight: 400;
   color: var(--basic-light-black);
+  display: grid;
+  margin: 30px;
 }
-
 
 .button-more {
   font-size: 14px;
@@ -591,13 +614,7 @@ p {
   background-color: var(--basic-extra-dark-brown);
 }
 
-.rating {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  color: var(--basic-extralight-black);
-  background-color: var(--basic-light-grey);
-}
+
 
 .hotels-item-name:hover {
   color: var(--basic-blue);
