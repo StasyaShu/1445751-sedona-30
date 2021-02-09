@@ -556,8 +556,8 @@ caption {
 
 .rating-wrapper {
   width: 140px;
-  margin-left: 500px;
-
+  /* margin-left: 500px; */
+  transform: translateX(450px);
 }
 
 .hotels-item img {
