@@ -531,12 +531,35 @@ caption {
   grid-template-rows: min-content min-content min-content;
   list-style: none;
   padding: 0%;
-  /* border: 2px solid var(--basik-dark-white); */
 }
 
 .hotels-item-name-wrapper {
   display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 45px 45px;
+  width: 360px;
+  height: 90px;
+  margin: 0;
 }
+
+.hotels-item-name {
+  grid-column: 1 / -1;
+}
+
+.hotel-name {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/* Как растянуть название отеля на всю троку? */
+
+.hotels-item-name-wrapper p {
+  padding: 10px;
+  margin: 0;
+  grid-row: 2 / 3;
+}
+
 
 .hotels-item {
   display: flex;
@@ -557,7 +580,7 @@ caption {
 .rating-wrapper {
   width: 140px;
   /* margin-left: 500px; */
-  transform: translateX(450px);
+  transform: translateX(400px);
 }
 
 .hotels-item img {
@@ -566,11 +589,7 @@ caption {
   margin-left: 73px;
 }
 
-.hotel-name {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-}
+
 
 .hotels-description {
   font-size: 14px;
@@ -603,7 +622,8 @@ caption {
 
 .button-more:active {
   background-color: var(--basic-extra-dark-blue);
-  /* TODO: при нажатии цвет текста описать через RGBA 4 параметр отвечает за прозрачность */
+  color: rgba(255, 255, 255, 0.5);
+
 }
 
 .button-book:hover {
@@ -612,6 +632,7 @@ caption {
 
 .button-book:active {
   background-color: var(--basic-extra-dark-brown);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -624,4 +645,3 @@ caption {
   opacity: 30%;
 }
 
-/* действия с сылкой htmlacademy пока что тоже не даются */
