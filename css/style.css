@@ -576,7 +576,7 @@ caption {
   justify-content: space-between;
   margin-top: 10px;
   width: 320px;
-  padding: 5px 30px 5px 30px;
+  padding: 5px 30px;
   font-family: "PT Sans", Arial. sans-serif;
   color: var(--basic-white);
   font-size: 14px;
@@ -584,6 +584,21 @@ caption {
   font-weight: 400;
   position: relative;
   margin-bottom: 30px;
+}
+
+.zero {
+  position: relative;
+}
+
+.zero::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 23px;
+  background-color: var(--basic-white);
+  left: 95px;
+  top: -1px;
+
 }
 
 .range-controls {
