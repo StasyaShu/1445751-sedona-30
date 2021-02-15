@@ -27,8 +27,8 @@
 @font-face {
   font-family: "PTSans";
   src:
-    url("PTSans-Bold.woff2") format("woff2"),
-    url("PTSans-Bold.woff") format("woff");
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -36,8 +36,8 @@
 @font-face {
   font-family: "PTSans";
   src:
-    url("PTSans.woff2") format("woff2"),
-    url("PTSans.woff") format("woff");
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -72,6 +72,8 @@
   width: 1200px;
   min-height: 100%;
   background-color: var(--basic-white);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 a {
@@ -391,6 +393,7 @@ h2 {
   align-items: center;
   padding-bottom: 20px;
   padding-top: 10px;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .footer-contacts {
@@ -479,8 +482,7 @@ h2 {
 
 .filters {
   background-color: var(--special-blue);
-  background: url("../img/background_photo.png") no-repeat;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: url("../img/background-catalog.jpg") no-repeat;
   width: 1200px;
   height: 217px;
 }
@@ -511,6 +513,7 @@ legend {
 
 .filter-list {
   list-style: none;
+  padding-left: 0;
 }
 
 .filter-option label {
@@ -519,30 +522,34 @@ legend {
   cursor: pointer;
   user-select: none;
   margin-bottom: 20px;
+  line-height: 16px;
+  padding-left: 30px;
 }
 
 .filter-input-checkbox+label::before {
   content: "";
   position: absolute;
-  left: -32px;
+  left: 0;
   top: 0;
   width: 16px;
   height: 16px;
   border: 2px solid #ffffff;
-  border-radius: 3px
+  border-radius: 3px;
+  display: block;
 }
 
 .filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
-  top: -4px;
-  left: -30px;
-  width: 12px;
-  height: 12px;
+  top: -1px;
+  left: 2px;
+  width: 17px;
+  height: 14px;
   background-image: url("../img/chekbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
+  background-size: cover;
+  display: block;
 }
 
 .price-filter-wrapper {
@@ -576,7 +583,7 @@ caption {
   justify-content: space-between;
   margin-top: 10px;
   width: 320px;
-  padding: 5px 30px;
+  padding: 3px 30px;
   font-family: "PT Sans", Arial. sans-serif;
   color: var(--basic-white);
   font-size: 14px;
@@ -598,7 +605,6 @@ caption {
   background-color: var(--basic-white);
   left: 95px;
   top: -1px;
-
 }
 
 .range-controls {
@@ -619,8 +625,8 @@ caption {
 
 .range-controls .toggle {
   position: absolute;
-  top: -6px;
-  left: 0px;
+  top: 50%;
+  left: 0;
   width: 19px;
   height: 19px;
   padding: 0;
@@ -629,6 +635,7 @@ caption {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
+  transform: translateY(-50%) translateX(0px);
 }
 
 .range-controls .toggle-min {
@@ -645,7 +652,7 @@ caption {
 }
 
 .range p {
-  margin: 2px 30px 2px 30px;
+  margin: 2px 30px;
 }
 
 .sorting-list-wrapper {
@@ -666,22 +673,34 @@ caption {
   padding: 0;
   display: flex;
   flex-direction: row;
-  margin-left: 380px;
+  margin-left: 420px;
 }
 
 .scrolling li {
   padding-right: 15px;
 }
 
-.scrolling path:hover {
+.scrolling svg {
+  fill: var(--basic-grey);
+}
+
+.scrolling svg:hover {
   fill: var(--basic-black);
 }
 
-.scrolling path:active {
+.scrolling svg:focus {
   fill: var(--basic-blue);
 }
 
-.scrolling path:focus {
+.scrolling svg:active {
+  fill: var(--basic-blue);
+}
+
+.scroll-down.active svg {
+  fill: var(--basic-blue);
+}
+
+.scroll-up.active svg {
   fill: var(--basic-blue);
 }
 
@@ -722,6 +741,12 @@ caption {
 
 .sorting-list a:active {
   color: var(--basic-black);
+  opacity: 100%;
+  border-bottom: none;
+}
+
+.sorting-price.active {
+  color: var(--basic-blue);
   opacity: 100%;
   border-bottom: none;
 }
@@ -782,21 +807,23 @@ caption {
   background-image:url("../img/shape_star.svg");
   background-repeat: round;
   width: 80px;
-  background-position: 100% 0%;
-
-
+  background-position: right;
+  direction: rtl;
+  margin-left: auto;
 }
 
 .star-desert {
   background-image:url("../img/shape_star.svg");
   background-repeat: round;
   width: 60px;
+  margin-left: auto;
 }
 
 .star-villas {
   background-image:url("../img/shape_star.svg");
   background-repeat: round;
   width: 40px;
+  margin-left: auto;
 }
 
 .rating {
@@ -845,6 +872,7 @@ caption {
 
 }
 .button-more {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
@@ -853,6 +881,7 @@ caption {
 }
 
 .button-book {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
