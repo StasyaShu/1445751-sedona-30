@@ -964,6 +964,12 @@ caption {
   margin-bottom: 30px;
 }
 
+.modal-open {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
 .modal-open-link {
   margin-bottom: 15px;
   width: 570px;
@@ -982,10 +988,18 @@ caption {
   color: var(--basic-white);
 }
 
-.modal-open {
-  display: none;
-  margin: 0;
-  padding: 0;
+.modal-open-link:hover {
+  background-color: var(--basic-dark-brown);
+}
+
+.modal-open-link:active {
+  background-color: var(--basic-extra-dark-brown);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-open-link a:active {
+  background-color: var(--basic-extra-dark-brown);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .modal-search-options {
@@ -996,10 +1010,9 @@ caption {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
-  padding: 20px 60px;
+  padding: 20px 10px 20px 60px;
   width: 540px;
   margin: 0;
-  justify-content: space-between;
 }
 
 .modal-search-options label {
@@ -1007,15 +1020,50 @@ caption {
 }
 
 .date {
-  width: 300px;
+  width: 340px;
   height: 40px;
   margin-bottom: 30px;
   text-align: left;
   background-color: var(--basic-light-grey);
   border: none;
-  background-image: url("../img/icon_calendar.svg");
-  background-position: 95% 50%;
-  background-repeat: no-repeat;
+}
+
+.arrival-date {
+  position: relative;
+}
+
+.arrival-date label {
+  margin-right: 10px;
+}
+
+.departure-date label {
+  margin-right: 5px;
+}
+
+.arrival-date svg {
+  position: absolute;
+  left: 92%;
+  top: 8px;
+  fill: var(--basic-grey);
+}
+
+.departure-date {
+  position: relative;
+}
+
+.departure-date svg {
+  position: absolute;
+  left: 92%;
+  top: 8px;
+  fill: var(--basic-grey);
+}
+
+.date-wrapper svg:hover {
+  fill: var(--basic-black);
+}
+
+.date-wrapper svg:active {
+  fill: var(--basic-blue);
 }
 
 .number{
@@ -1023,6 +1071,72 @@ caption {
   height: 40px;
   background-color: var(--basic-light-grey);
   border: none;
+  text-align: center;
+}
+
+.adults-label {
+  margin-right: 30px;
+}
+
+.adults-number {
+  margin-right: 60px;
+}
+
+.children-label {
+  margin-right: 30px;
+}
+
+.adults-wrapper {
+  position: relative;
+}
+
+.adults-wrapper svg:first-of-type {
+  position: absolute;
+  top: 18px;
+  left: 130px;
+  fill: var(--basic-grey);
+}
+
+.adults-wrapper svg:last-of-type {
+  position: absolute;
+  top: 14px;
+  left: 200px;
+  fill: var(--basic-grey);
+}
+
+.adults-wrapper svg:hover {
+  fill: var(--basic-black);
+}
+
+.adults-wrapper svg:active {
+  fill: var(--basic-blue);
+}
+
+
+.children-wrapper {
+  position: relative;
+}
+
+.children-wrapper svg:first-of-type {
+  position: absolute;
+  top: 18px;
+  left: 90px;
+  fill: var(--basic-grey);
+}
+
+.children-wrapper svg:last-of-type {
+  position: absolute;
+  top: 14px;
+  left: 150px;
+  fill: var(--basic-grey);
+}
+
+.children-wrapper svg:hover {
+  fill: var(--basic-black);
+}
+
+.children-wrapper svg:active {
+  fill: var(--basic-blue);
 }
 
 .button-find {
