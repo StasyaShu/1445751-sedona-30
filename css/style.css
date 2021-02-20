@@ -109,9 +109,6 @@ ul {
 
 .main-header {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 .main-navigation {
