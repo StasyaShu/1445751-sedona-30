@@ -74,6 +74,7 @@
   min-height: 100%;
   background-color: var(--basic-white);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: relative;
 }
 
 a {
@@ -190,7 +191,10 @@ ul {
   justify-self: center;
   align-items: center;
   justify-content: center;
+  background-size: contain, 1200px 509px;
 }
+
+
 
 .features {
   width: 1200px;
@@ -231,11 +235,11 @@ h2 {
 }
 
 .features-city {
-  height: 256px;
+  min-height: 256px;
   color: var(--basic-white);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -243,7 +247,6 @@ h2 {
 
 .photo-city-wrap {
   background-color: var(--special-brown);
-  align-self: center;
   width: 800px;
   height: 256px;
 }
@@ -251,27 +254,44 @@ h2 {
 .features-city-wrap {
   font-family: "PT Sans", Arial, sans-serif;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   padding: 30px;
   background-color: var(--basic-blue);
   text-align: center;
-  display: block;
 }
 
 .features-city-real {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   display: block;
-  padding-top: 15px;
+  margin: 0;
+  padding: 0;
 }
 
+.features-city-wrap b:first-of-type {
+  margin-top: 20px;
+}
+
+.features-city-wrap p:nth-of-type(3) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.features-city-wrap p:last-child {
+  margin: 10px 0px;
+  padding: 0;
+}
+
+
 .features-city-descr {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   display: block;
-  padding-top: 15px;
+
 }
 
 .features-city img {
@@ -292,6 +312,8 @@ h2 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: var(--basic-black);
 }
 
 .features-offer-descr {
@@ -341,7 +363,7 @@ h2 {
   width: 400px;
   text-align: center;
   background-color: var(--basic-neytral);
-  padding: 52px 40px 52px 40px;
+  padding: 52px 40px;
 }
 
 .features-special-item {
@@ -349,24 +371,37 @@ h2 {
   line-height: 21px;
   font-weight: 700;
   display: block;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: var(--basic-black);
+  margin: 0;
+  padding: 0;
 }
 
 .features-special-descr {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--basic-light-black) display: block;
+  color: var(--basic-light-black);
+  display: block;
   padding-top: 10px;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 /* Search hotel */
+
+.search-hotel-container {
+  align-self: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  min-height: 450px;
+}
 
 .search-hotel {
   display: flex;
   flex-direction: column;
   align-content: center;
   text-align: center;
-  height: 600px;
   /* position: relative; */
 }
 
@@ -397,9 +432,11 @@ h2 {
   background-color: rgba(255, 255, 255, 0.8);
   justify-items: center;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   padding-top: 20px;
   font-family: "PT Sans", Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-contacts {
@@ -456,8 +493,9 @@ h2 {
 .copyright-wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -802,6 +840,10 @@ caption {
   border-bottom: none;
 }
 
+.hotels {
+  margin-bottom: 140px;
+}
+
 .hotels-list {
   display: grid;
   grid-template-rows: min-content min-content min-content;
@@ -971,7 +1013,7 @@ caption {
 /* Modal window */
 
 .modal-open {
-  /* display: none; */
+  position: absolute;
   margin: 0;
   padding: 0;
   align-self: center;
@@ -979,6 +1021,7 @@ caption {
   height: 330px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  transform: translateY(0);
 }
 
 .modal-search {
@@ -988,13 +1031,14 @@ caption {
   height: 60px;
   background-color: var(--basic-brown);
   padding: 20px;
-  display: block;
   text-align: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-white);
+  position: relative;
+  z-index: 2;
 }
 
 .modal-search:hover {
@@ -1084,6 +1128,11 @@ caption {
   background-color: var(--basic-light-grey);
   border: none;
   text-align: center;
+}
+
+.number::placeholder {
+  color: var(--basic-black);
+  opacity: 1;
 }
 
 .adults-label {
@@ -1179,7 +1228,6 @@ caption {
 
 .map {
   display: block;
-  position: absolute;
   z-index: -1;
   bottom: -47px;
   width: 100%;
