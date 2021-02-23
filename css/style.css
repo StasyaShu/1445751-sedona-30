@@ -114,7 +114,7 @@ ul {
 
 .main-navigation {
   position: relative;
-  height: 50px;
+  height: 40px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -125,7 +125,7 @@ ul {
   width: 138px;
   height: 70px;
   left: 530px;
-  top: 0px;
+  top: -14px;
   z-index: 2;
 }
 
