@@ -1016,10 +1016,10 @@ caption {
 .modal-open {
   position: absolute;
   margin: 0;
-  padding: 0;
+  padding: 50px 50px;
   align-self: center;
-  width: 570px;
-  height: 330px;
+  width: 550px;
+  height: 380px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   transform: translateY(0);
@@ -1028,10 +1028,10 @@ caption {
 .modal-search {
   align-self: center;
   display: block;
-  width: 570px;
-  height: 60px;
+  width: 550px;
+  height: 80px;
   background-color: var(--basic-brown);
-  padding: 20px;
+  padding-top: 30px;
   text-align: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
@@ -1059,9 +1059,9 @@ caption {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
-  padding: 20px 10px 20px 60px;
   width: 540px;
   margin: 0;
+  padding: 0;
 }
 
 .modal-search-options label {
@@ -1203,7 +1203,7 @@ caption {
 
 .button-find {
   display: block;
-  width: 460px;
+  width: 455px;
   height: 50px;
   margin-top: 40px;
   margin-bottom: 30px;
