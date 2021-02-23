@@ -1017,8 +1017,8 @@ caption {
   position: absolute;
   margin: 0;
   align-self: center;
-  width: 550px;
-  height: 380px;
+  width: 560px;
+  height: 400px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   transform: translateY(0);
@@ -1028,7 +1028,7 @@ caption {
 .modal-search {
   align-self: center;
   display: block;
-  width: 550px;
+  width: 560px;
   height: 80px;
   background-color: var(--basic-brown);
   padding-top: 30px;
@@ -1054,13 +1054,14 @@ caption {
 .modal-search-options {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
-  width: 540px;
-  margin: 50px 50px;
+  width: 490px;
+  margin: 50px 30px;
   padding: 0;
 }
 
@@ -1069,7 +1070,7 @@ caption {
 }
 
 .date {
-  width: 340px;
+  width: 320px;
   height: 40px;
   margin-bottom: 30px;
   padding-left: 15px;
@@ -1141,7 +1142,7 @@ caption {
 }
 
 .adults-number {
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .children-label {
@@ -1204,8 +1205,8 @@ caption {
 .button-find {
   display: block;
   width: 455px;
-  height: 50px;
-  margin-top: 40px;
+  height: 60px;
+  margin-top: 50px;
   margin-bottom: 30px;
   padding: 0;
   background-color: var(--basic-blue);
