@@ -224,6 +224,19 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    const link = document.querySelector(".modal-search");
+    const modal = document.querySelector(".modal-open");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("open-action");
+      modal.classList.toggle("close-action");
+    });
+
+  </script>
+
 </body>
 
 </html>
