@@ -217,14 +217,15 @@ h2 {
   display: block;
   width: 600px;
   height: 80px;
-  margin: 2px auto;
+  margin: 2px auto 25px;
+
 }
 
 .description-promo {
   display: block;
   align-items: center;
   text-align: center;
-  margin: 2px auto 26px;
+  margin: 2px auto 55px;
   font-family: "PT sans", Arial, sans-serif;
 }
 
@@ -395,7 +396,6 @@ h2 {
   position: relative;
   z-index: 2;
   min-height: 50px;
-  margin-left: 310px;
 }
 
 .search-hotel {
@@ -410,14 +410,14 @@ h2 {
   display: block;
   margin: 2px auto;
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 24px;
   font-weight: 700;
 }
 
 .search-hotel-book {
   display: block;
-  margin: 30px auto;
+  margin: 40px auto;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -538,14 +538,13 @@ h2 {
   align-items: flex-start;
   padding-left: 73px;
   padding-top: 30px;
-  justify-content: space-between;
 }
 
 .filter fieldset {
   padding: 0;
   border: none;
   text-align: left;
-  margin-right: 75px;
+  margin-right: 150px;
 }
 
 legend {
@@ -555,6 +554,11 @@ legend {
 .filter-list {
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  margin-top: 25px;
 }
 
 .filter-option label {
@@ -635,6 +639,7 @@ caption {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-left: 150px;
 }
 
 .range {
@@ -749,6 +754,7 @@ caption {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: 100px;
 }
 
 .sorting-list {
@@ -841,16 +847,13 @@ caption {
   border-bottom: none;
 }
 
-.hotels {
-  margin-bottom: 140px;
-}
-
 .hotels-list {
   display: grid;
   grid-template-rows: min-content min-content min-content;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-bottom: 130px;
+  margin-top: 0;
   border-bottom: 2px solid var(--basik-dark-white);
 }
 
@@ -878,7 +881,7 @@ caption {
   padding: 0px;
   margin: 0;
   grid-row: 2 / 3;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 
@@ -887,8 +890,8 @@ caption {
   flex-wrap: wrap;
   align-items: center;
   border-top: 2px solid var(--basik-dark-white);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .rating-wrapper {
@@ -935,7 +938,7 @@ caption {
 
 .hotels-item img {
   width: 135px;
-  height: 90px;
+  height: 140px;
   margin-left: 73px;
 }
 
@@ -952,7 +955,8 @@ caption {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 0px;
   padding: 0;
 }
 
