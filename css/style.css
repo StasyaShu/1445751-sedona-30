@@ -142,14 +142,25 @@ ul {
 
 .site-navigation-information-link {
   padding-left: 70px;
+  color: var(--basic-black);
+  text-decoration: none;
 }
 
 .site-navigation-hotels-link {
   padding-left: 140px;
+  color: var(--basic-black);
+  text-decoration: none;
 }
 
 .site-navigation-state-map-link {
   padding-left: 210px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.site-navigation-photo-video-link {
+  color: var(--basic-black);
+  text-decoration: none;
 }
 
 .site-navigation a:hover {
@@ -369,24 +380,24 @@ h2 {
 }
 
 .features-special-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   display: block;
-  font-family: "PT Sans", Arial, sans-serif;
-  color: var(--basic-black);
   margin: 0;
   padding: 0;
 }
 
 .features-special-descr {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: var(--basic-light-black);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--basic-light-black);
   display: block;
   padding-top: 10px;
-  font-family: "PT Sans", Arial, sans-serif;
 }
 
 /* Search hotel */
@@ -454,6 +465,11 @@ h2 {
 .footer-contacts p {
   display: block;
   margin: 10px;
+}
+
+.footer-contacts a {
+  color: var(--basic-black);
+  text-decoration: none;
 }
 
 .footer-social {
@@ -580,39 +596,27 @@ legend {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   border: 3px solid #ffffff;
   border-radius: 3px;
   display: block;
 }
 
+
 .filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
-  top: -2px;
-  left: 2px;
-  width: 21px;
-  height: 20px;
+  top: 0px;
+  left: 4px;
+  width: 17px;
+  height: 15px;
   background-image: url("../img/chekbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
   display: block;
 }
-
-/*
-.filter-input:disabled+label::before {
-  border: 2px solid var(--basic-brown-disabled);
-}
-
-.filter-input:disabled:checked+label::after {
-  background-image: url(../img/checkbox-on-disabled.svg);
-}
-
-.filter-input:disabled+label {
-  color: var(--basic-brown-disabled);
-} */
 
 .price-filter-wrapper {
   width: 317px;
@@ -653,7 +657,7 @@ caption {
   margin-top: 10px;
   width: 320px;
   padding: 3px 30px;
-  font-family: "PT Sans", Arial. sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
@@ -722,7 +726,7 @@ caption {
 
 .range p {
   margin: 2px 30px;
-  font-family: "PT Sans", Arial. sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
@@ -735,7 +739,7 @@ caption {
   padding: 5px 20px;
   margin-top: 30px;
   background-color: transparent;
-  font-family: "PT Sans", Arial. sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
@@ -856,9 +860,9 @@ caption {
   grid-template-rows: min-content min-content min-content;
   list-style: none;
   padding: 0;
-  margin-bottom: 130px;
+  margin-bottom: 133px;
   margin-top: 0;
-  border-bottom: 2px solid var(--basik-dark-white);
+  border-bottom: 2px solid var(--basic-dark-white);
 }
 
 .hotels-item-name-wrapper {
@@ -873,12 +877,15 @@ caption {
 
 .hotels-item-name {
   grid-column: 1 / -1;
+  color: var(--basic-black);
+  text-decoration: none;
 }
 
 .hotel-name {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .hotels-item-name-wrapper p {
@@ -893,7 +900,7 @@ caption {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border-top: 2px solid var(--basik-dark-white);
+  border-top: 2px solid var(--basic-dark-white);
   padding-top: 5px;
   padding-bottom: 5px;
 }
