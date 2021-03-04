@@ -24,6 +24,11 @@
   --special-brown: #935C61;
   --special-red: #ED8089;
   --special-green: #6A996C;
+  --special-footer: rgba(255, 255, 255, 0.8);
+  --special-toggle: #cfcfcf;
+  --special-transparent-white: rgba(255, 255, 255, 0.5);
+  --special-transparent-black: rgba(0, 0, 0, 0.25);
+  --special-modal-open-shadow: rgba(0, 1, 1, 0.15);
 }
 
 @font-face {
@@ -74,7 +79,7 @@
   width: 1200px;
   min-height: 100%;
   background-color: var(--basic-white);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px var(--special-transparent-black));
   position: relative;
 }
 
@@ -194,7 +199,7 @@ ul {
 .container-header {
   background-color: var(--special-blue);
   background:
-    url("../img/shape.svg") no-repeat bottom center,
+    url("../img/mask.svg") no-repeat bottom center,
     url("../img/background_photo.png") no-repeat;
   width: 1200px;
   height: 509px;
@@ -217,20 +222,15 @@ ul {
   font-weight: 400;
 }
 
-
-h2 {
-  font-family: "PT sans", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
 .description-title {
   display: block;
   width: 600px;
   height: 80px;
   margin: 2px auto 25px;
-
+  font-family: "PT sans", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .description-promo {
@@ -304,7 +304,8 @@ h2 {
   line-height: 21px;
   font-weight: 400;
   display: block;
-
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .features-city img {
@@ -404,7 +405,6 @@ h2 {
 
 .search-hotel-container {
   align-self: center;
-  overflow: cover;
   position: relative;
   z-index: 2;
   min-height: 50px;
@@ -415,7 +415,6 @@ h2 {
   flex-direction: column;
   align-content: center;
   text-align: center;
-  /* position: relative; */
 }
 
 .interested {
@@ -442,7 +441,7 @@ h2 {
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: min-content;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--special-footer);
   justify-items: center;
   align-items: center;
   padding-bottom: 30px;
@@ -598,7 +597,7 @@ legend {
   top: 0;
   width: 19px;
   height: 19px;
-  border: 3px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 3px;
   display: block;
 }
@@ -706,7 +705,7 @@ caption {
   border: 8px solid var(--basic-white);
   background-color: var(--basic-grey);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--special-toggle);
   cursor: pointer;
   transform: translateY(-50%) translateX(0px);
 }
@@ -885,7 +884,6 @@ caption {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--basic-black);
 }
 
 .hotels-item-name-wrapper p {
@@ -1004,7 +1002,7 @@ caption {
 
 .button-more:active {
   background-color: var(--basic-extra-dark-blue);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--special-transparent-white);
 
 }
 
@@ -1014,8 +1012,9 @@ caption {
 
 .button-book:active {
   background-color: var(--basic-extra-dark-brown);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--special-transparent-white);
 }
+
 
 .hotels-item-name:hover {
   color: var(--basic-blue);
@@ -1035,7 +1034,7 @@ caption {
   width: 560px;
   height: 400px;
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--special-modal-open-shadow);
   transform: translateY(0);
   overflow: hidden;
 }
@@ -1048,6 +1047,8 @@ caption {
 .close-action {
   animation-name: close;
   animation-duration: 1s;
+  height: 0px;
+  transform: translateY(-100%);
 }
 
 @keyframes open {
@@ -1097,7 +1098,7 @@ caption {
 
 .modal-search:active {
   background-color: var(--basic-extra-dark-brown);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--special-transparent-white);
 }
 
 .modal-search-options {
@@ -1291,7 +1292,7 @@ caption {
 
 .button-find:active {
   background-color: var(--basic-extra-dark-blue);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--special-transparent-white);
 }
 
 .map {
